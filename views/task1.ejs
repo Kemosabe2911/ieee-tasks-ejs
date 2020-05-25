@@ -5,11 +5,13 @@
         <form class="form-container">
           <div class="form-group">
               <label for="name">Name</label>
-            <input type="name" name="name" id="name" class="form-control" placeholder="Enter Name">
+            <input type="name" name="name" id="name" class="form-control" value="<%= typeof name != 'undefined' ? name : ''%>" 
+            placeholder="Enter Name">
           </div>
           <div class="form-group">
               <label for="email">E-mail Id</label>
-            <input type="email" name="email" id="email" class="form-control " placeholder="Enter E-mail id">
+            <input type="email" name="email" id="email" class="form-control " 
+            value="<%= typeof email != 'undefined' ? email : ''%>" placeholder="Enter E-mail id">
           </div>
           <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-primary text-center">Submit</button>
