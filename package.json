@@ -1,0 +1,26 @@
+{
+  "name": "ieee-tasks-ejs",
+  "version": "1.0.0",
+  "description": "ieee-tasks using ejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kemosabe2911/ieee-tasks-ejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kemosabe2911/ieee-tasks-ejs/issues"
+  },
+  "homepage": "https://github.com/Kemosabe2911/ieee-tasks-ejs#readme",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "mongoose": "^5.9.15"
+  }
+}
