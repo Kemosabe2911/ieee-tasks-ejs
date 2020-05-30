@@ -17,7 +17,17 @@ router.post('/task1',(req,res) =>{
     if(!name || !email){
         errors.push({msg: "Please fill all the Fields"});
     }
- 
+
+    if(errors.length>0){
+        res.render('tasks',{
+            errors,
+            name,
+            email
+        });
+    }
+    else{
+        res.send('Pass');
+    }
 });
 
 
