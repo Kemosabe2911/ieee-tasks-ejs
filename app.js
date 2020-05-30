@@ -9,9 +9,9 @@ const app= express();
 const db= require('./config/keys').MongoURI;
 
 //Connect to MongDB
-mongoose.connect(db,{ useNewUrlParser: true})
+/*mongoose.connect(db,{ useNewUrlParser: true})
 .then(() => console.log('Connected MongoDB'))
-.catch(err => console.log(err));
+.catch(err => console.log(err));*/
 
 //EJS
 app.use(expressLayouts);

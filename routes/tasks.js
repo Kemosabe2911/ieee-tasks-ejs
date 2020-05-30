@@ -10,8 +10,15 @@ router.get('/task2',(req,res) => res.render('task2'));
 //Task submission
 router.post('/task1',(req,res) =>{
     console.log(req.body);
-    res.send('hello');
-})
+    const{ name, email} = req.body;
+    let errors= [];
+
+    //Check all fields
+    if(!name || !email){
+        errors.push({msg: "Please fill all the Fields"});
+    }
+ 
+});
 
 
 module.exports = router;
