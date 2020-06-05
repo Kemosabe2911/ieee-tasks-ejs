@@ -4,7 +4,7 @@ const mongoose= require('mongoose');
 
 
 const app= express();
-
+/*
 //MongoBD Config
 const db= require('./config/keys').MongoURI;
 
@@ -12,6 +12,17 @@ const db= require('./config/keys').MongoURI;
 mongoose.connect(db,{ useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => console.log('Connected MongoDB'))
 .catch(err => console.log(err));
+*/
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://Kemosabe2911:Stevin@123@tasks-cwohk.mongodb.net/Task?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  console.log('Mongo Error');
+  // perform actions on the collection object
+  client.close();
+});
 
 //EJS
 app.use(expressLayouts);
