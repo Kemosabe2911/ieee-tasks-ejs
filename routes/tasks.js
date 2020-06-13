@@ -32,7 +32,8 @@ router.post('/task1',(req,res) =>{
                 });
                 newTaskSubmitted.save()
                 .then( task =>{
-                    res.send('Worked');
+                    res.redirect('/');
+                    console.log('Success');
                 })
                 .catch(err => console.error(err));
             }
