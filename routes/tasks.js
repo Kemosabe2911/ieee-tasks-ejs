@@ -23,6 +23,7 @@ router.post('/task1',(req,res) =>{
         .then((task) =>{
             if(task){
                 errors.push({msg :'Email Id already exist'});
+                console.log(errors);
             }
             else{
                 const newTaskSubmitted= new Task({
