@@ -15,20 +15,13 @@ router.post('/task1',(req,res) =>{
     console.log(req.body);
     const{ name, email} = req.body;
     let errors= [];
-    /*if(!name || !email){
-        errors.push({msg: "Please fill all the Fields"});
-    }
-
-    if(errors.length>0){
-        res.render('tasks',{
-            errors,
-            name,
-            email
-        });
-    }
+    if(!name || !email){
+        errors.push({msg :'Please fill all the Fields'});
+        console.log(errors);
+    } 
     else{
         res.send('Pass');
-    }*/
+    }
     
 });
 
