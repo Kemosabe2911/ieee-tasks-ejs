@@ -12,7 +12,6 @@ router.get('/task2',(req,res) => res.render('task2'));
 
 //Task submission
 router.post('/task1',(req,res) =>{
-    console.log(req.body);
     const{ name, email} = req.body;
     let errors= [];
     if(!name || !email){
@@ -20,7 +19,20 @@ router.post('/task1',(req,res) =>{
         console.log(errors);
     } 
     else{
-        res.send('Pass');
+        Task.findOne({email: email})
+        .then((task) =>{
+            if(task){
+                errors.push({msg :'Email Id already exist'});
+            }
+            else{
+                const newTaskSubmitted= new Task({
+                    name,
+                    email
+                });
+                console.log(newTaskSubmitted);
+                res.send('Hello');
+            }
+        })
     }
     
 });
