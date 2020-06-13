@@ -29,8 +29,11 @@ router.post('/task1',(req,res) =>{
                     name,
                     email
                 });
-                console.log(newTaskSubmitted);
-                res.send('Hello');
+                newTaskSubmitted.save()
+                .then( task =>{
+                    res.send('Worked');
+                })
+                .catch(err => console.error(err));
             }
         })
     }
